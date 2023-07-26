@@ -1,0 +1,238 @@
+------------------Question No 01---------------------------------------
+
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+
+------------------Question No 02-------------------------------------
+
+public class NameAndDegree {
+    public static void main(String[] args) {
+        System.out.println("My name is Hansana");
+        System.out.println("My Degree Programme is Networking");
+    }
+}
+
+save this as : NameAndDegree.java
+Then navigate this file through cmd 
+Then compile the java file : javac NameAndDegree.java
+Run the programme : java NameAndDegree
+
+
+------------------Question No 03-------------------------------------
+
+Using For Loop :
+
+public class App {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Executing Loop " + i);
+        }
+    }
+}
+
+Using While Loop :
+
+public class App {
+    public static void main(String[] args) {
+        int i = 0;
+        while (i < 5) {
+            System.out.println("Executing Loop " + i);
+            i++;
+        }
+    }
+
+------------------Question No 04-------------------------------------
+
+Code: using break
+
+public class App {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        for (int x : numbers) {
+            if (x == 30) {
+                break;
+            }
+            System.out.print(x);
+            System.out.print("\n");
+        }
+        System.out.print("I'm out of the Loop now");
+    }
+}
+
+
+Results :  |	10                            |
+	   |	20                            |
+	   |	I'm out of the Loop now       |
+
+
+code: using continue
+
+
+public class App {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        for (int x : numbers) {
+            if (x == 30) {
+                continue;
+            }
+            System.out.print(x);
+            System.out.print("\n");
+        }
+        System.out.print("I'm out of the Loop now");
+    }
+}
+
+
+Results :  |	10                            |
+	   |	20                            |
+	   |    40                            |
+	   |    50                            |
+	   |	I'm out of the Loop now       |
+
+------------------Question No 05-------------------------------------
+
+
+public class App {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'D':
+                System.out.println("You passed");
+            case 'F':
+                System.out.println("Better try again");
+                break;
+            default:
+                System.out.println("Invalid grade");
+        }
+        System.out.println("Your grade is " + grade);
+    }
+}
+
+
+
+Results :
+
+For A --- 
+	Excellent!
+	Your grade is A
+For D ---
+	You passed
+	Better try again
+	Your grade is D
+For F ---
+	Better ty again
+	Your grade is F
+
+Code after removing 'break' in line no:6
+
+
+public class App {
+    public static void main(String[] args) {
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+            case 'D':
+                System.out.println("You passed");
+            case 'F':
+                System.out.println("Better try again");
+                break;
+            default:
+                System.out.println("Invalid grade");
+        }
+        System.out.println("Your grade is " + grade);
+    }
+}
+
+
+Results :
+
+For A --- 
+	Excellent!
+	You passed
+	Better try again
+	Your grade is A
+For D ---
+	You passed
+	Better try again
+	Your grade is D
+For F ---
+	Better ty again
+	Your grade is F
+
+
+Repeat the same scenario by using if-else-if statement instead of switch case. 
+
+code:
+
+public class App {
+    public static void main(String[] args) {
+        char grade = 'F';
+        
+        if (grade == 'A') {
+            System.out.println("Excellent!");
+        } else if (grade == 'D') {
+            System.out.println("You passed");
+        } else if (grade == 'F') {
+            System.out.println("Better try again");
+        } else {
+            System.out.println("Invalid grade");
+        }
+
+        System.out.println("Your grade is " + grade);
+    }
+}
+
+Results : 
+
+
+For A --- 
+	Excellent!
+	Your grade is A
+For D ---
+	You passed
+	Your grade is D
+For F ---
+	Better try again
+	Your grade is F
+
+
+------------------Question No 06-------------------------------------
+
+public class App {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        for (int x : numbers) {
+            System.out.print(x);
+            System.out.print(",");
+        }
+        System.out.print("\n");
+        String[] names = {"James", "Larry", "Tom", "Lacy"};
+        for (String name : names) {
+            System.out.print(name);
+            System.out.print(",");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
