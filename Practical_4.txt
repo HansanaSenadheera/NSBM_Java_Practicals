@@ -1,0 +1,155 @@
+Practical 04
+Exercise 1
+Employee Class
+package com.mycompany.lab3;
+public class Employee {
+    private int empID;
+    private String empname;
+    private String empDesignation;
+    public void setempID(int ID){
+    empID=ID;
+    }
+    public void setempname(String n){
+    empname=n;
+    }
+    public void setempDesignation(String d){
+    empDesignation=d;
+    }
+    public int getempID(){
+    return empID;
+    }
+    public String getempname(){
+    return empname;
+    }
+    public String getempDesignation(){
+    return empDesignation;
+    }
+}
+
+
+
+
+The class used to invoke Employee Class
+public class Lab3 {
+
+    public static void main(String[] args) {
+        Employee Bo=new Employee(); 
+        Bo.setempname("Mr. bogdan");
+        Bo.setempID(101);
+        Bo.setempDesignation("Chief executive marketer");
+        
+        Employee Bi=new Employee();
+        Bi.setempname("Ms.Bird");
+        Bi.setempID(103);
+        Bi.setempDesignation("Junior Executive");
+        
+        
+       
+       
+        {
+            System.out.println("Employee name: "+Bo.getempname());
+            System.out.println("Employee number: "+Bo.getempID());
+            System.out.println("Designation: "+Bo.getempDesignation());
+        }
+        System.out.println("");
+         {
+            System.out.println("Employee name: "+Bi.getempname());
+            System.out.println("Employee number: "+Bi.getempID());
+            System.out.println("Designation: "+Bi.getempDesignation());
+        }
+    }
+}
+
+Exercise 2
+Building Lab3point2 1.0-SNAPSHOT
+--------------------------------[ jar ]---------------------------------
+
+--- exec-maven-plugin:3.1.0:exec (default-cli) @ Lab3point2 ---
+9
+6
+------------------------------------------------------------------------
+BUILD SUCCESS
+Exercise 3
+Parent Class
+package com.mycompany.practicals;
+
+public class Person {
+    protected String name;
+    protected int ID;
+    public void setName(String n){
+    name=n;
+    }
+    public String getName(){
+    return name;
+    }
+    public void setID(int i){
+    ID=i;
+    }
+    public int getID(){
+    return ID;
+    }
+}
+Child Class Student
+package com.mycompany.practicals;
+
+public class Student extends Person {
+       private String course;
+        public void setCourse(String c){
+    course=c;
+    }
+    public String getCourse(){
+    return course;
+    }
+        public void display(){
+        System.out.println("Student Name" +name);
+        System.out.println("Student ID " +ID);
+        System.out.println("Course" +course);
+    }
+}
+Child Class Lecturer
+package com.mycompany.practicals;
+
+public class Lecturer extends Person{
+    private String programme;
+
+        public void setCourse(String p){
+    programme=p;
+    }
+    public String getCourse(){
+    return programme;
+    }
+    public void display(){
+        System.out.println("Lecturer Name " +name);
+        System.out.println("Lecturer ID " +ID);
+        System.out.println("Programme" +programme);
+    }
+}
+Main Method:
+package com.mycompany.practicals;
+public class Practicals {
+
+    public static void main(String[] args) {
+    Student s= new Student();
+    s.setName("Sandali");
+    s.setID(2345);
+    s.setCourse("Software Engineering");
+    s.display();
+    Lecturer l= new Lecturer();
+    l.setName("Pramudya");
+    l.setID(8790);
+    l.setCourse("C#");
+    l.display();
+    }
+}
+Output:
+--------------------------------[ jar ]---------------------------------
+
+--- exec-maven-plugin:3.1.0:exec (default-cli) @ Practicals ---
+Student NameSandali
+Student ID 2345
+CourseSoftware Engineering
+Lecturer Name Pramudya
+Lecturer ID 8790
+ProgrammeC#
+------------------------------------------------------------------------
+BUILD SUCCESS
