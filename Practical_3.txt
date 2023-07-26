@@ -1,0 +1,62 @@
+------------------ Practical 3 code ------------------ 
+
+EncapsulationDemo Class
+package com.mycompany.practicals;
+public class EncapsulationDemo {
+    private String EmpName;
+    private int age;
+    private float salary;
+    private float bonus;
+    public EncapsulationDemo(String EmpName, int age, float salary, float bonus){
+    this.age=age;
+    this.EmpName=EmpName;
+    this.salary=salary;
+    }
+    public void setEmpName(String Name){
+    EmpName=Name;
+    }
+     public String getEmpName(){
+    return EmpName;
+    }
+         public void setBSalary(float BSalary){
+    salary=BSalary;
+    }
+     public float getBSalary(){
+    return salary;
+    }
+    
+     public float CalcBonus(){
+         return bonus+salary;
+     }
+     public void Display(){
+        System.out.println("Emp Name: " +EmpName);
+        System.out.println("Basic Salary: " +salary);
+        System.out.println("Bonus Amount: " +(bonus+salary));
+        
+     }
+}
+Main method
+package com.mycompany.practicals;
+public class Practicals {
+
+    public static void main(String[] args) {
+    EncapsulationDemo e=new EncapsulationDemo("Hansana", 24, 100000.0f, 89000.0f) ;
+    e.CalcBonus();
+    e.Display();
+    e.setEmpName("Kaushalya");
+    e.setBSalary(300000.0f);
+    e.getEmpName();
+    e.getBSalary();
+    e.Display();
+    }
+}
+
+--------------------------------------------------------------------------------
+
+output :
+	Emp Name : Hansana
+	Basic Salary : 100000.0
+	Bonus Amount : 100000.0
+	Emp Name : Kauhsalya
+	Basic Salary : 300000.0
+	Bonus Amount : 300000.0
